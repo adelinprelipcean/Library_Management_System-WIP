@@ -3,7 +3,27 @@
 {% load static %}
 
 {% block main_content %}
-
-<h1>THIS IS LOGIN PAGE</h1>
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
+<div class="container w-75 p-5">
+    <form class="ms-0 me-0" style="background-color: #C7D6D5;">
+    <div class="mb-2 p-2">
+    <label for="username" class="form-label" style="font-weight:900;">Username</label>
+    <input type="text" class="form-control" id="username" aria-describedby="username">
+    </div>
+    <div class="mb-2 p-2">
+    <label for="exampleInputPassword1" class="form-label" style="font-weight:900;">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="container text-center">
+            <button type="button" class="btn btn-light mt-4 mb-3 w-25 align-self-start">Submit</button>
+            <a href="/register_page"><button type="button" class="btn btn-light mt-4 mb-3 w-25 align-self-center">Register</button></a>
+    </div>
+    </form>
+</div>
 
 {% endblock %}
+    
