@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+
+<div class="jumbotron justify-content-around align-items-end" style="padding-bottom: 50px;"  >
+    <div class="container" style="width: 70vw; margin-bottom: 10vh; margin-top: 5vh;">
+        <img src="{% static '/main_logo_big.png' %}" class="rounded float-start" alt="big logo" style="height: 18vh"></img> 
+        <h1 class="display-5" >Welcome to our library!</h1>
+        <p>We're glad you're here! Let's see if you can find the books you're looking for!</p>
+        <a class="btn btn-success" href="/books" role="button">Browse our collection</a>
+    </div>
+    <div class="container text-justify" style=" font-family: 'Roboto Slab', serif; font-size: 1em; font-weight: 500; padding-top: 10vh; width: 70vw;">
+        <div class="row">
+          <div class="col">
+            <p style="font-weight: 600;">Knowledge and Intellectual Growth:</p>
+            Reading books opens doors to new worlds, ideas, and perspectives. It is a journey of constant learning and intellectual growth. The more you read, the more knowledge you accumulate, broadening your understanding of various subjects.
+          </div>
+          <div class="col">
+            <p style="font-weight: 600;">Enhanced Imagination and Creativity:</p>
+            Books are a gateway to imagination. They stimulate creativity by allowing readers to visualize different scenarios, characters, and landscapes. The power of imagination nurtured through books can positively impact various aspects of life.
+          </div>
+          <div class="col">
+            <p style="font-weight: 600;">Stress Reduction and Mental Well-being:</p>
+            Reading provides a therapeutic escape from the stresses of daily life. It is a mindful activity that transports you to different realms, offering relaxation and reducing stress. The mental engagement with a good book can contribute significantly to overall well-being.          </div>
+        </div>
+      </div>
+
+</div>
+
+{% endblock %}
