@@ -17,12 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', home_page),
-    path('books/', books_page),
-    path('your_bag/', your_bag),
-    path('returns/', returns_page),
-    path('login_page/', login_page),
-]
+    path('', home_page, name='home'),
+    path('books/', books_page, name='books'),
+    path('your_bag/', your_bag, name='bag'),
+    path('returns/', returns_page, name='returns'),
+    path('login_page/', login_page, name='login_page'),
+    path('dashboard/', dashboard, name='dashboard'),
+    path('add_book/', add_book, name='add_book'),
+    path('delete_book/', delete_book_func, name='delete_book'),
+    path('login_page/register', login_page, name='login_page'),
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

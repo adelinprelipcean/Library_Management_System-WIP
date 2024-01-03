@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+
+<div class="container text-center mt-3 mb-3">
+    <div class="row align-items-center">
+      <div class="col b-5">
+        COVER
+      </div>
+      <div class="col">
+        TITLE
+      </div>
+      <div class="col">
+        AUTHOR
+      </div>
+      <div class="col">
+        PUBLISHER
+      </div>
+    {% for book in book%}
+    <div class="row align-items-center border border-start-0">
+        
+        <div class="col b-5 border border-start-0">
+          <img src="{{book.cover.url}}" style="width: 100px">
+        </div>
+        <div class="col">
+          {{book.title}}
+        </div>
+        <div class="col">
+          {{book.author}}
+        </div>
+        <div class="col">
+          {{book.publisher}}
+        </div>
+        
+      </div>
+    {%endfor%}    
+</div>
+    
+
+<form class="container text-center p-4 rounded" style="max-width: 600px; background-color: #C7D6D5; margin-top: 50px;" action="" method='POST'>
+    {% csrf_token %}
+    <h2>Remove a book from your library</h2>
+    <div class="mb-3">
+      <input type="text" class="form-control mb-3" id="title" name="title" placeholder="Title">
+    <button type="submit" class="btn btn-danger">Remove</button>
+  </form>
+
+{% endblock %}

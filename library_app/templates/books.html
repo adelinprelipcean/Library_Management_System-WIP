@@ -4,6 +4,18 @@
 
 {% block main_content %}
 
-<h1>THIS IS BOOKS PAGE</h1>
+<div class="row m-auto p-auto justify-content-center">
+{% for book in book%}
+<div class="card m-3" style="width: 18rem;">
+    <img src= "{{book.cover.url}}" class="card-img-top pt-3" alt="book_cover_missing">
+    <div class="card-body row align-content-end text-start">
+    <h5 class="card-title ps-0" style="font-weight: 900;">{{book.title}}</h5>
+    <p class="text p-0 m-0" style="font-weight: 500;">Author:{{book.author}}</p>
+    <p class="text p-0">Publisher:{{book.publisher}}</p>
+    <a href="#" class="btn btn-primary">Add to bag</a>
+    </div>
+</div>
 
+{% endfor %} 
+</div>
 {% endblock %}
