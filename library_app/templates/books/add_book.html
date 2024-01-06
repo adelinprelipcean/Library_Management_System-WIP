@@ -3,19 +3,12 @@
 {% load static %}
 
 {% block main_content %}
-
-<form enctype="multipart/form-data" method='POST' class="container text-center p-4 rounded" style="max-width: 600px; background-color: #C7D6D5; margin-top: 50px;">
-    {% csrf_token %}
-    <h2>Add a book to your library</h2>
-    <div class="mb-3">
-      <input type="text" class="form-control mb-3" id="title" name="title" placeholder="Title">
-      <input type="text" class="form-control mb-3" id="author" name="author" placeholder="Author">
-      <input type="text" class="form-control mb-3" id="publisher" name="publisher" placeholder="Publisher">
-
-      
-
-    </div>
-    <button type="submit" class="btn btn-success">Submit</button>
-  </form>
-
+<div  class="container text-center mt-3 mb-3">
+<h1>Add a book</h1>
+<form method="post" enctype="multipart/form-data" class="container text-center">
+  {% csrf_token %}  
+  {{form.as_p}}
+  <button class="btn btn-success" type="submit">Add book</button>
+</form>
+</div>
 {% endblock %}

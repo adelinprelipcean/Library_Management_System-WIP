@@ -1,9 +1,9 @@
-from django.shortcuts import render
 from django.contrib import admin
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .models import *
 from django.urls import reverse
+from .models import Book
+from .forms import BookForm
 
 # Create your views here.
 
@@ -39,9 +39,24 @@ def add_book(request):
           title = request.POST['title']
           author = request.POST['author']
           publisher = request.POST['publisher']
-          Book.objects.create(title=title, author=author, publisher=publisher)
+          quantity = request.POST['quantity']
+          cover = request.POST['cover']
+          Book.objects.create(title=title, author=author, publisher=publisher, quantity=quantity, cover=cover)
           return redirect(reverse('delete_book'))
      return render(request,'books/add_book.html', context)
+
+def upload_image(request): #new
+    if request.method == 'POST':
+        form = BookForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect("add_book")
+    else:
+        form = BookForm()
+        context = {
+            'form': form
+        }
+    return render(request, 'books/add_book.html', context)
 
 def delete_book_func(request):
      book = Book.objects.all()

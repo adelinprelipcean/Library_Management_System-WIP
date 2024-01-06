@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+
+
+<h1>Upload An Image</h1>
+<form method="post" enctype="multipart/form-data" class="container text-center p-4 rounded" style="max-width: 600px; background-color: #C7D6D5; margin-top: 50px;">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit New Post</button>
+</form>
+
+{% endblock %}
