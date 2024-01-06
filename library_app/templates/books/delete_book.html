@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+
+<div class="container text-center mt-3 mb-3">
+    {% for book in book%}
+    <div class="row align-items-center border border-start-0">
+        
+        <div class="col b-5 border border-start-0">
+          <img src="{{book.cover.url}}" style="width: 100px">
+        </div>
+        <div class="col">
+          <div>Title:</div>
+          <div style="font-weight: 700">{{book.title}}</div>
+        </div>
+        <div class="col">
+          <div>Author:</div>
+          {{book.author}}
+        </div>
+        <div class="col">
+          <div>Publisher:</div>
+          {{book.publisher}}
+        </div>
+        <div class="col">
+          <a href="{{book.id}}" class="btn btn-danger">Remove</a>
+        </div>
+    </div>
+    {%endfor%}    
+</div>
+
+{% endblock %}

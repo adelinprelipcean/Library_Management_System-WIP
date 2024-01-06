@@ -41,20 +41,14 @@ def add_book(request):
           publisher = request.POST['publisher']
           Book.objects.create(title=title, author=author, publisher=publisher)
           return redirect(reverse('delete_book'))
-     return render(request,'books/add.html', context)
+     return render(request,'books/add_book.html', context)
 
 def delete_book_func(request):
      book = Book.objects.all()
      context={'book': book}
-     
-     if request.POST:
-          title = request.POST['title']
-          try:
-               Book.objects.get(title=title).delete()
-               return redirect(reverse('delete_book'))
-          except:
-               print('Title not found!')
-               return redirect(reverse('delete_book'))
-     else:
-          return render(request, 'books/delete.html',context)
+     return render(request, 'books/delete_book.html',context)
 
+def delete_event(request, event_id):
+     event = Book.objects.get(pk=event_id)
+     event.delete()
+     return redirect('delete_book')

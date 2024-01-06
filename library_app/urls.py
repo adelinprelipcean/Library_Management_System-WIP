@@ -31,5 +31,5 @@ urlpatterns = [
     path('add_book/', add_book, name='add_book'),
     path('delete_book/', delete_book_func, name='delete_book'),
     path('login_page/register', login_page, name='login_page'),
-    
+    path('delete_book/<event_id>', delete_event, name="delete-event"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

@@ -1,12 +1,14 @@
 from django.db import models
 from django import forms
-import uuid
+
 # Create your models here.
 class Book(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)  
     publisher = models.CharField(max_length=100)   
-
+    cover = models.ImageField(upload_to='', null=True)
     def __str__(self):
-        return self.title
+        return f"{self.title} has id {self.id}, author as {self.author} and publisher as {self.publisher}"
+    
+    
