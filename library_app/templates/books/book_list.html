@@ -6,10 +6,10 @@
 
 <div class="container text-center mt-3 mb-3">
     <form class="d-flex m-4" role="search" method="get" action="{% url 'book_list' %}">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{ request.GET.q }}">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{ request.GET.q }}">
+        <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
-    {% for book in book%}
+    {% for book in books %}
     <div class="row align-items-center border border-start-0">
         
         <div class="col b-5 border border-start-0">
@@ -36,7 +36,7 @@
           <a href="{{book.id}}" class="btn btn-danger m-2" style="width: 100px">Remove</a>
         </div>
     </div>
-    {%endfor%}    
+    {% endfor %}    
 </div>
 
 {% endblock %}

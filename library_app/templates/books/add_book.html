@@ -3,12 +3,21 @@
 {% load static %}
 
 {% block main_content %}
-<div  class="container text-center mt-3 mb-3">
-<h1>Add a book</h1>
-<form method="post" enctype="multipart/form-data" class="container text-center">
-  {% csrf_token %}  
-  {{form.as_p}}
-  <button class="btn btn-success" type="submit">Add book</button>
-</form>
+<style>
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+  <h1 class="container text-center">Add a book</h1>
+  <div class="container" style="max-width: 500px">
+  <form method="post" enctype="multipart/form-data" class="container text-center border rounded">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+      </table>
+    <button class="btn btn-success m-3" type="submit">Add book</button>
+  </form>
 </div>
 {% endblock %}

@@ -26,13 +26,17 @@ urlpatterns = [
     path('books/', books_page, name='books'),
     path('your_bag/', your_bag, name='bag'),
     path('returns/', returns_page, name='returns'),
+    
     path('login_page/', login_page, name='login_page'),
+    path('login_page/register', login_page, name='login_page'),
     path('dashboard/', dashboard, name='dashboard'),
+    
     path('add_book/', upload_image, name='add_book'),
     path('delete_book/', delete_book_func, name='delete_book'),
-    path('login_page/register', login_page, name='login_page'),
-    path('delete_book/<event_id>', delete_event, name="delete-event"),
+    path('delete_book/<event_id>', delete_event, name='delete-event'),
     path('upload/', upload_image, name = 'upload_image'),
+    path('edit_book/<int:book_id>/', edit_book, name='edit_book'),
+    path('book_list/', book_list, name='book_list'),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
