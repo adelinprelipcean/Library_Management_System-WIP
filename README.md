@@ -25,11 +25,11 @@ A library management system that allows users to rent books.
 
 ---
 
-📸 Screenshots
+## 📸 Screenshots
 
-🖥️ Welcome Page
+### 🖥️ Welcome Page
 ![Dashboard Screenshot](screenshots/home.png)
-📚 Book List
+### 📚 Book List
 ![Dashboard Screenshot](screenshots/books.png)
 
 ---
@@ -38,51 +38,51 @@ A library management system that allows users to rent books.
 
 Follow these steps to set up the project locally:
 
-# 1️⃣ Clone the repository
+1️⃣ Clone the repository
 git clone https://github.com/adelinprelipcean/my_library_site.git
 cd my_library_site
 
-# 2️⃣ Create a virtual environment and activate it
-# On macOS/Linux:
+2️⃣ Create a virtual environment and activate it
+### On macOS/Linux:
 python -m venv venv
 source venv/bin/activate
 
-# On Windows:
+### On Windows:
 python -m venv venv
 venv\Scripts\activate.bat
 
-# 3️⃣ Install the required dependencies
+3️⃣ Install the required dependencies
 pip install -r requirements.txt
 
-# 4️⃣ Apply the database migrations
+4️⃣ Apply the database migrations
 python manage.py migrate
 
-# 5️⃣ Run the development server
+5️⃣ Run the development server
 python manage.py runserver
 
-# 6️⃣ Open the app in your browser at: http://127.0.0.1:8000/
+6️⃣ Open the app in your browser at: http://127.0.0.1:8000/
 
 ---
 
 🔮 Roadmap
- Implement all book borrowing features (borrow/return)
+ 🔧Implement all book borrowing features (borrow/return)
 
- Implement shopping basket
+ 🔧Implement shopping basket
 
- Add admin and user panels
+ 🔧Add admin and user panels
 
- Implement search functionality for books
+ 🔧Implement search functionality for books
 
- Add user profile pages
+ 🔧Add user profile pages
 
- Improve responsive design
+ 🔧Improve responsive design
 
  ---
 
-🤝 Contributing
+## 🤝🏻 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
-📞 Contact
+## 📧 Contact
 Feel free to reach out to me at aamoviescontact@gmail.com.
