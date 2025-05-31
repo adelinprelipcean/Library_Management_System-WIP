@@ -16,12 +16,12 @@ A library management system that allows users to rent books.
 
 ## 🛠️ Built With
 
-| ![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg) | **Python** |
+| ![Python](screenshots/python.png) | **Python** |
 | :---: | :---: |
-| ![Django](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg) | **Django** |
-| ![SQLite](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg) | **SQLite** |
-| ![HTML5](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg) | **HTML5** |
-| ![CSS3](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg) | **CSS3** |
+| ![Python](screenshots/django.png) | **Django** |
+| ![Python](screenshots/sqlite.png) | **SQLite** |
+| ![Python](screenshots/html.png) | **HTML5** |
+| ![Python](screenshots/css.png) | **CSS3** |
 
 ---
 
@@ -39,32 +39,43 @@ A library management system that allows users to rent books.
 Follow these steps to set up the project locally:
 
 1️⃣ Clone the repository
+```bash
 git clone https://github.com/adelinprelipcean/my_library_site.git
 cd my_library_site
+```
 
 2️⃣ Create a virtual environment and activate it
 ### On macOS/Linux:
+```bash
 python -m venv venv
 source venv/bin/activate
-
+```
 ### On Windows:
+```bash
 python -m venv venv
 venv\Scripts\activate.bat
-
+```
 3️⃣ Install the required dependencies
+```bash
 pip install -r requirements.txt
-
+```
 4️⃣ Apply the database migrations
+```bash
 python manage.py migrate
-
+```
 5️⃣ Run the development server
+```bash
 python manage.py runserver
-
-6️⃣ Open the app in your browser at: http://127.0.0.1:8000/
+```
+6️⃣ Open the app in your browser at:
+```bash
+http://127.0.0.1:8000/
+```
 
 ---
 
 🔮 Roadmap
+
  🔧Implement all book borrowing features (borrow/return)
 
  🔧Implement shopping basket
