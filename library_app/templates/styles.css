@@ -1,0 +1,36 @@
+body {
+  background-color: #ecebf3;
+  font-family: "Roboto Slab", serif;
+}
+.nav {
+  width: 65% !important;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #c7d6d5;
+}
+.my-4 {
+  margin-top: 20px !important;
+  margin-bottom: 5px !important;
+}
+.navbar > .container-fluid {
+  justify-content: end;
+}
+.navbar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+a {
+  text-decoration: none;
+}
+.card-img-top {
+  height: auto;
+  max-width: 300px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
