@@ -16,12 +16,12 @@ A library management system that allows users to rent books.
 
 ## 🛠️ Built With
 
-| ![Python](screenshots/python.png) | **Python** |
+| <img src="screenshots/python.png" width="40"/> | **Python** |
 | :---: | :---: |
-| ![Python](screenshots/django.png) | **Django** |
-| ![Python](screenshots/sqlite.png) | **SQLite** |
-| ![Python](screenshots/html.png) | **HTML5** |
-| ![Python](screenshots/css.png) | **CSS3** |
+| <img src="screenshots/django.png" width="40"/> | **Django** |
+| <img src="screenshots/sqlite.png" width="40"/> | **SQLite** |
+| <img src="screenshots/html.png" width="40"/> | **HTML5** |
+| <img src="screenshots/css.png" width="40"/> | **CSS3** |
 
 ---
 
