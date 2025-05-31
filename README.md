@@ -1,4 +1,4 @@
-# 📚 My Library Site
+# 📚 Local Library
 
 A library management system that allows users to rent books.
 
