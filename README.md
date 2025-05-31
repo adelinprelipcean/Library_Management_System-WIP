@@ -78,7 +78,7 @@ http://127.0.0.1:8000/
 
  🔧Implement all book borrowing features (borrow/return)
 
- 🔧Implement shopping basket
+ 🔧Implement borrow basket
 
  🔧Add admin and user panels
 
